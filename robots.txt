@@ -2,4 +2,4 @@
 User-agent:*
 Disallow:
 
-Sitemap: https://docs.classisland.tech/sitemap.xml
+Sitemap: https://classisland.github.io/classisland-docs-next/sitemap.xml
