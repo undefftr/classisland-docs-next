@@ -29,6 +29,13 @@ jobs:
     - name: Install Google Chrome
       run: npx puppeteer browsers install chrome
 
+    - name: Install Source Han Sans Fonts
+      run: |
+        wget -O SourceHanSansSC.zip https://github.com/adobe-fonts/source-han-sans/releases/download/2.004R/SourceHanSansSC.zip
+        unzip -d sourcehansanssc/ SourceHanSansSC.zip
+        mv sourcehansanssc/OTF/SimplifiedChinese /usr/share/fonts/sourcehansans-sc
+        fc-cache -fv
+
     - name: Generate PDF
       run: pnpm run export-pdf
 
